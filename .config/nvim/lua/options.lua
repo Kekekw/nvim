@@ -5,7 +5,7 @@ vim.opt.wrap = false
 vim.opt.incsearch = true
 
 -- clipboard
-vim.opt.clipboard:append({ 'unnamedplus' })
+vim.opt.clipboard:append({"unnamedplus"})
 
 -- line numbers
 vim.opt.number = true
@@ -19,23 +19,23 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 -- mouse
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
--- ruler 
-vim.opt.colorcolumn = '120'
+-- ruler
+vim.opt.colorcolumn = "120"
 
 -- indicator column
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- navigate away from a modified file without first
 -- saving it.
 vim.opt.hidden = true
 
 -- enable folding and prevent folding when opening a file
-vim.opt.foldmethod = 'indent'
+vim.opt.foldmethod = "indent"
 vim.opt.foldlevel = 20
 vim.opt.foldlevelstart = 20
 
 -- python provider configuration
 -- makes startup faster
-vim.g.python3_host_prog = '/usr/bin/python3'
+vim.g.python3_host_prog = "/usr/bin/python3"
