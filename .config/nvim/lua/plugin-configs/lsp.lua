@@ -82,3 +82,4 @@ map("n", "<F12>", ":lua vim.lsp.buf.definition()<CR>", {noremap = true, silent =
 map("n", "<Leader>e", ":lua vim.diagnostic.open_float()<CR>", {noremap = true, silent = true})
 map("n", "<Leader>n", ":lua vim.diagnostic.goto_next()<CR>", {noremap = true, silent = true})
 map("n", "<Leader>p", ":lua vim.diagnostic.goto_prev()<CR>", {noremap = true, silent = true})
+map("n", "<leader>d", ":lua vim.lsp.buf.hover()<CR>", {noremap = true, silent = true})
