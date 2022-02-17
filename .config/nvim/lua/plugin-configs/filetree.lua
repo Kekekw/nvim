@@ -1,15 +1,14 @@
-vim.cmd([[
-        hi link NeoTreeDirectoryName Directory
-        hi link NeoTreeDirectoryIcon NeoTreeDirectoryName
-      ]])
-
-require("neo-tree").setup {
-  filesystem = {
-    follow_current_file = true,
-    use_libuv_file_watcher = true,
-  }
+vim.g.chadtree_settings = {
+    ["options.show_hidden"] = false,
+    ["options.session"] = false,
+    ["view.sort_by"] = {"is_folder", "file_name", "ext"},
+    ["keymap.tertiary"] = {"<C-t>"},
+    ["keymap.v_split"] = {"<C-v>"},
+    ["keymap.h_split"] = {"<C-x>"},
+    ["keymap.collapse"] = {"za"},
+    ["theme.icon_glyph_set"] = "ascii"
 }
 
 local map = vim.api.nvim_set_keymap
 
-map("n", "<C-e>", "<Cmd>NeoTreeRevealToggle<CR>", {noremap = true, silent = true})
+map("n", "<C-e>", "<Cmd>CHADopen<CR>", {noremap = true, silent = true})

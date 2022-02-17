@@ -42,10 +42,7 @@ require("packer").startup(
         use "hrsh7th/vim-vsnip"
 
         -- file tree
-        use {
-            "nvim-neo-tree/neo-tree.nvim",
-            requires = {"nvim-lua/plenary.nvim", "kyazdani42/nvim-web-devicons", "MunifTanjim/nui.nvim"}
-        }
+        use {"ms-jpq/chadtree", branch = "chad", run = "python3 -m chadtree deps"}
 
         -- formatter
         use "sbdchd/neoformat"
