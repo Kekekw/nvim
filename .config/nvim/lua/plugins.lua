@@ -27,12 +27,14 @@ require("packer").startup(
 
         -- syntax tree
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+        use "nvim-treesitter/nvim-treesitter-textobjects"
 
         -- LSP
         use "neovim/nvim-lspconfig"
         use "folke/lsp-colors.nvim"
         use "jose-elias-alvarez/nvim-lsp-ts-utils"
         use "b0o/schemastore.nvim"
+        use "ray-x/lsp_signature.nvim"
 
         -- completion
         use "hrsh7th/nvim-cmp"

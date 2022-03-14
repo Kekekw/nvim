@@ -6,11 +6,13 @@ require "lspconfig".tsserver.setup {
     init_options = {
         hostInfo = "neovim"
     },
+    flags = {
+        debounce_text_changes = 30
+    },
     root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
     on_attach = function(client, bufnr)
         local ts_utils = require("nvim-lsp-ts-utils")
-        ts_utils.setup {
-        }
+        ts_utils.setup {}
 
         ts_utils.setup_client(client)
     end
@@ -34,7 +36,6 @@ require "lspconfig".diagnosticls.setup {
                     ".eslitrc.js",
                     "package.json"
                 },
-                debounce = 100,
                 args = {
                     "--cache",
                     "--stdin",
@@ -74,6 +75,16 @@ require "lspconfig".jsonls.setup {
 
 require "lspconfig".vuels.setup {}
 require "lspconfig".pyright.setup {}
+
+-- Function signature tooltip
+require "lsp_signature".setup(
+    {
+        bind = true, -- This is mandatory, otherwise border config won't get registered.
+        handler_opts = {
+            border = "rounded"
+        }
+    }
+)
 
 local map = vim.api.nvim_set_keymap
 

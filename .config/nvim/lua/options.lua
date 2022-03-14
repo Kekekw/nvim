@@ -21,7 +21,7 @@ vim.opt.smartindent = true
 -- mouse
 vim.opt.mouse = "a"
 
--- ruler
+-- visual cues
 vim.opt.colorcolumn = "120"
 
 -- indicator column
