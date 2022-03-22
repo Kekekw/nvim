@@ -4,7 +4,8 @@ local telescope = require("telescope")
 telescope.setup {
     pickers = {
         find_files = {
-            hidden = true
+            hidden = true,
+            previewer = false,
         }
     },
     defaults = {
@@ -38,14 +39,6 @@ telescope.setup {
         selection_strategy = "reset",
         sorting_strategy = "descending",
         layout_strategy = "horizontal",
-        layout_config = {
-            horizontal = {
-                mirror = false
-            },
-            vertical = {
-                mirror = true
-            }
-        },
         file_sorter = require "telescope.sorters".get_fuzzy_file,
         file_ignore_patterns = {},
         generic_sorter = require "telescope.sorters".get_generic_fuzzy_sorter,
@@ -54,8 +47,7 @@ telescope.setup {
         borderchars = {"─", "│", "─", "│", "╭", "╮", "╯", "╰"},
         color_devicons = true,
         use_less = true,
-        path_display = {},
-        set_env = {["COLORTERM"] = "truecolor"}, -- default = nil,
+        set_env = {["COLORTERM"] = "truecolor"},
         file_previewer = require "telescope.previewers".vim_buffer_cat.new,
         grep_previewer = require "telescope.previewers".vim_buffer_vimgrep.new,
         qflist_previewer = require "telescope.previewers".vim_buffer_qflist.new,

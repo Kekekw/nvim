@@ -11,3 +11,5 @@ map("n", "<Leader>dk", ":call vimspector#Restart()<CR>", {noremap = true, silent
 map("n", "<Leader>dh", ":call vimspector#StepOut()<CR>", {noremap = true, silent = true})
 map("n", "<Leader>dl", ":call vimspector#StepInto()<CR>", {noremap = true, silent = true})
 map("n", "<Leader>dj", ":call vimspector#StepOver()<CR>", {noremap = true, silent = true})
+
+map("n", "<Leader>di", "<Plug>VimspectorBalloonEval<CR>", {noremap = false})
