@@ -40,7 +40,7 @@ telescope.setup {
         sorting_strategy = "descending",
         layout_strategy = "horizontal",
         file_sorter = require "telescope.sorters".get_fuzzy_file,
-        file_ignore_patterns = {},
+        file_ignore_patterns = { "^./.git/" },
         generic_sorter = require "telescope.sorters".get_generic_fuzzy_sorter,
         winblend = 0,
         border = {},
@@ -86,7 +86,7 @@ local map = vim.api.nvim_set_keymap
 
 map("n", "<leader>ff", "<Cmd>Telescope find_files<CR>", {noremap = true, silent = true})
 map("n", "<Leader>fg", "<Cmd>Telescope live_grep<CR>", {noremap = true, silent = true})
-map("n", "<Leader>fb", "<Cmd>Telescope buffers<CR>", {noremap = true, silent = true})
+map("n", "<Leader>fb", "<Cmd>Telescope resume<CR>", {noremap = true, silent = true})
 map("n", "<Leader>fc", "<Cmd>Telescope git_commits<CR>", {noremap = true, silent = true})
 
 map("n", "<Leader>fsd", "<Cmd>Telescope lsp_document_symbols<CR>", {noremap = true, silent = true})
