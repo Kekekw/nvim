@@ -39,3 +39,5 @@ vim.opt.foldlevelstart = 20
 -- python provider configuration
 -- makes startup faster
 vim.g.python3_host_prog = "/usr/bin/python3"
+
+vim.opt.laststatus = 3

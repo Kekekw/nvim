@@ -14,9 +14,8 @@ require "lspconfig".tsserver.setup {
     on_attach = function(client, bufnr)
         local ts_utils = require("nvim-lsp-ts-utils")
         ts_utils.setup {}
-
         ts_utils.setup_client(client)
-    end
+    end,
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

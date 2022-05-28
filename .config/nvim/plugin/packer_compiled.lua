@@ -115,6 +115,11 @@ _G.packer_plugins = {
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lsp-status.nvim"] = {
+    loaded = true,
+    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/lsp-status.nvim",
+    url = "https://github.com/nvim-lua/lsp-status.nvim"
+  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
@@ -184,6 +189,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/schemastore.nvim",
     url = "https://github.com/b0o/schemastore.nvim"
+  },
+  ["statusline.lua"] = {
+    loaded = true,
+    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/statusline.lua",
+    url = "https://github.com/qchouleur/statusline.lua"
   },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,

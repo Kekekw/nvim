@@ -36,6 +36,7 @@ require("packer").startup(
         use "jose-elias-alvarez/nvim-lsp-ts-utils"
         use "b0o/schemastore.nvim"
         use "ray-x/lsp_signature.nvim"
+        use "nvim-lua/lsp-status.nvim"
 
         use {
             "folke/trouble.nvim",
@@ -96,6 +97,9 @@ require("packer").startup(
 
         -- whitespace
         use "lukas-reineke/indent-blankline.nvim"
+
+        -- status line
+        use 'qchouleur/statusline.lua'
 
         if packer_boostrap then
             require("packer").sync()
