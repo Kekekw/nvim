@@ -18,9 +18,11 @@ require("packer").startup(
         use "nvim-telescope/telescope.nvim"
         use "nvim-telescope/telescope-hop.nvim"
         use {"nvim-telescope/telescope-fzf-native.nvim", run = "make"}
+        use "nvim-telescope/telescope-ui-select.nvim"
+        use "windwp/nvim-spectre"
 
         -- gruvbox colorscheme
-        use "sainnhe/gruvbox-material"
+        use "gruvbox-community/gruvbox"
 
         -- git wrapper
         use "tpope/vim-fugitive"
@@ -31,10 +33,23 @@ require("packer").startup(
 
         -- LSP
         use "neovim/nvim-lspconfig"
-        use "folke/lsp-colors.nvim"
         use "jose-elias-alvarez/nvim-lsp-ts-utils"
         use "b0o/schemastore.nvim"
         use "ray-x/lsp_signature.nvim"
+
+        use {
+            "folke/trouble.nvim",
+            requires = {
+                "kyazdani42/nvim-web-devicons",
+            }
+        }
+
+        use {
+          "jose-elias-alvarez/null-ls.nvim",
+          requires = {
+            "nvim-lua/plenary.nvim"
+          }
+        }
 
         -- completion
         use "hrsh7th/nvim-cmp"

@@ -1,3 +1,4 @@
+-- Telescope
 local actions = require("telescope.actions")
 local telescope = require("telescope")
 
@@ -5,7 +6,7 @@ telescope.setup {
     pickers = {
         find_files = {
             hidden = true,
-            previewer = false,
+            previewer = false
         }
     },
     defaults = {
@@ -40,7 +41,7 @@ telescope.setup {
         sorting_strategy = "descending",
         layout_strategy = "horizontal",
         file_sorter = require "telescope.sorters".get_fuzzy_file,
-        file_ignore_patterns = { "^./.git/" },
+        file_ignore_patterns = {"^./.git/"},
         generic_sorter = require "telescope.sorters".get_generic_fuzzy_sorter,
         winblend = 0,
         border = {},
@@ -75,12 +76,18 @@ telescope.setup {
             override_generic_sorter = true, -- override the generic sorter
             override_file_sorter = true, -- override the file sorter
             case_mode = "smart_case"
+        },
+        ["ui-select"] = {
+            require("telescope.themes").get_dropdown {}
         }
     }
 }
 
 telescope.load_extension("hop")
 telescope.load_extension("fzf")
+telescope.load_extension("ui-select")
+
+-- Spectre
 
 local map = vim.api.nvim_set_keymap
 
@@ -92,4 +99,6 @@ map("n", "<Leader>fc", "<Cmd>Telescope git_commits<CR>", {noremap = true, silent
 map("n", "<Leader>fsd", "<Cmd>Telescope lsp_document_symbols<CR>", {noremap = true, silent = true})
 map("n", "<Leader>fsw", "<Cmd>Telescope lsp_dynamic_workspace_symbols<CR>", {noremap = true, silent = true})
 map("n", "<Leader>fr", "<Cmd>Telescope lsp_references<CR>", {noremap = true, silent = true})
-map("n", "<Leader>ca", "<Cmd>Telescope lsp_code_actions<CR>", {noremap = true, silent = true})
+map("n", "<Leader>ca", "<Cmd>lua vim.lsp.buf.code_action()<CR>", {noremap = true, silent = true})
+
+map("n", "<leader>S", "<Cmd>lua require('spectre').open()<CR>", {noremap = true, silent = true})

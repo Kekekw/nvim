@@ -95,10 +95,10 @@ _G.packer_plugins = {
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
-  ["gruvbox-material"] = {
+  gruvbox = {
     loaded = true,
-    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/gruvbox-material",
-    url = "https://github.com/sainnhe/gruvbox-material"
+    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/gruvbox-community/gruvbox"
   },
   harpoon = {
     loaded = true,
@@ -115,11 +115,6 @@ _G.packer_plugins = {
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["lsp-colors.nvim"] = {
-    loaded = true,
-    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
-    url = "https://github.com/folke/lsp-colors.nvim"
-  },
   ["lsp_signature.nvim"] = {
     loaded = true,
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/lsp_signature.nvim",
@@ -135,6 +130,11 @@ _G.packer_plugins = {
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
   },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -149,6 +149,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-spectre"] = {
+    loaded = true,
+    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/nvim-spectre",
+    url = "https://github.com/windwp/nvim-spectre"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -190,10 +195,20 @@ _G.packer_plugins = {
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/telescope-hop.nvim",
     url = "https://github.com/nvim-telescope/telescope-hop.nvim"
   },
+  ["telescope-ui-select.nvim"] = {
+    loaded = true,
+    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/telescope-ui-select.nvim",
+    url = "https://github.com/nvim-telescope/telescope-ui-select.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["trouble.nvim"] = {
+    loaded = true,
+    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/trouble.nvim",
+    url = "https://github.com/folke/trouble.nvim"
   },
   ["vim-auto-save"] = {
     loaded = true,
