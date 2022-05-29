@@ -95,6 +95,11 @@ _G.packer_plugins = {
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["gh.nvim"] = {
+    loaded = true,
+    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/gh.nvim",
+    url = "https://github.com/ldelossa/gh.nvim"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/gruvbox",
@@ -114,6 +119,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/oflo/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["litee.nvim"] = {
+    loaded = true,
+    path = "/home/oflo/.local/share/nvim/site/pack/packer/start/litee.nvim",
+    url = "https://github.com/ldelossa/litee.nvim"
   },
   ["lsp-status.nvim"] = {
     loaded = true,

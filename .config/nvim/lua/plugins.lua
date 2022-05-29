@@ -24,8 +24,14 @@ require("packer").startup(
         -- gruvbox colorscheme
         use "gruvbox-community/gruvbox"
 
-        -- git wrapper
+        -- git
         use "tpope/vim-fugitive"
+        use {
+          "ldelossa/gh.nvim",
+          requires = {
+            "ldelossa/litee.nvim"
+          }
+        }
 
         -- syntax tree
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
@@ -41,7 +47,7 @@ require("packer").startup(
         use {
             "folke/trouble.nvim",
             requires = {
-                "kyazdani42/nvim-web-devicons",
+                "kyazdani42/nvim-web-devicons"
             }
         }
 
