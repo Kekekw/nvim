@@ -44,13 +44,17 @@ require "lspconfig".terraformls.setup {}
 -- requires $ yarn global add yaml-language-server
 require "lspconfig".yamlls.setup {}
 
+-- requires rust-analyzer
+require 'lspconfig'.rust_analyzer.setup {}
+
 -- Function signature tooltip
 require "lsp_signature".setup(
     {
         bind = true, -- This is mandatory, otherwise border config won't get registered.
         handler_opts = {
             border = "rounded"
-        }
+        },
+        select_signature_key = "<C-n>"
     }
 )
 

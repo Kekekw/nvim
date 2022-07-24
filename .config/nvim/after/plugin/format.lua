@@ -9,3 +9,5 @@ vim.g.neoformat_basic_format_trim = 1
 vim.g.neoformat_try_formatprg = 1
 
 local map = vim.api.nvim_set_keymap
+
+map("n", "<leader>if", ":Neoformat<CR>", {noremap = true, silent = true})
