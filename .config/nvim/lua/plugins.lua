@@ -32,6 +32,8 @@ require("packer").startup(
         use "nvim-treesitter/nvim-treesitter-textobjects"
 
         -- LSP
+        use { "williamboman/mason.nvim" }
+        use { "williamboman/mason-lspconfig.nvim" }
         use "neovim/nvim-lspconfig"
         use "jose-elias-alvarez/nvim-lsp-ts-utils"
         use "b0o/schemastore.nvim"

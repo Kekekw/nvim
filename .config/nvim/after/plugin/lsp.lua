@@ -1,7 +1,10 @@
 local util = require "lspconfig/util"
 
+require("mason-lspconfig").setup {}
+local lspconfig = require("lspconfig")
+
 -- requires $ npm install -g typescript typescript-language-server
-require "lspconfig".tsserver.setup {
+lspconfig.tsserver.setup {
     cmd = {"typescript-language-server", "--stdio"},
     filetypes = {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx"},
     init_options = {
@@ -21,8 +24,7 @@ require "lspconfig".tsserver.setup {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
--- requires $ npm install -g vscode-langservers-extracted
-require "lspconfig".jsonls.setup {
+lspconfig.jsonls.setup {
     capabilities = capabilities,
     settings = {
         json = {
@@ -32,20 +34,11 @@ require "lspconfig".jsonls.setup {
     }
 }
 
--- requires $ npm install -g vls
-require "lspconfig".vuels.setup {}
-
--- requires $ npm install -g pyright
-require "lspconfig".pyright.setup {}
-
--- requires terraform-ls package
-require "lspconfig".terraformls.setup {}
-
--- requires $ yarn global add yaml-language-server
-require "lspconfig".yamlls.setup {}
-
--- requires rust-analyzer
-require 'lspconfig'.rust_analyzer.setup {}
+lspconfig.vuels.setup {}
+lspconfig.pyright.setup {}
+lspconfig.terraformls.setup {}
+lspconfig.yamlls.setup {}
+lspconfig.rust_analyzer.setup {}
 
 -- Function signature tooltip
 require "lsp_signature".setup(
