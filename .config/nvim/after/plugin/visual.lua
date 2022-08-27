@@ -2,7 +2,7 @@
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
 
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme kanagawa")
 
 -- whitespaces
 vim.opt.list = true
