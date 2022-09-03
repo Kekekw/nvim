@@ -38,7 +38,7 @@ require("packer").startup(
         use "jose-elias-alvarez/nvim-lsp-ts-utils"
         use "b0o/schemastore.nvim"
         use "ray-x/lsp_signature.nvim"
-        use "nvim-lua/lsp-status.nvim"
+        use "j-hui/fidget.nvim"
 
         use {
             "folke/trouble.nvim",

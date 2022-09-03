@@ -54,6 +54,9 @@ require "lsp_signature".setup(
 -- Trouble
 require "trouble".setup {}
 
+-- LSP progress
+require "fidget".setup {}
+
 
 -- null-ls
 local null_ls = require("null-ls")
@@ -62,7 +65,6 @@ local sources = {
     -- requires $ npm install -g eslint_d
   null_ls.builtins.code_actions.eslint_d,
   null_ls.builtins.diagnostics.eslint_d,
-  null_ls.builtins.diagnostics.tsc,
   null_ls.builtins.formatting.eslint_d,
 }
 
